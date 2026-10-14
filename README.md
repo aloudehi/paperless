@@ -21,13 +21,10 @@ Kurz: Diese minimal-statische Website informiert über eine private n8n-Automati
 - Für eine Apex-Domain (z.B. `example.com`): Lege A-Records zu den GitHub-Pages-IP-Adressen an.
 
 ## Wichtige Hinweise
-- Ersetze alle Platzhalter vor der Veröffentlichung.
-- Diese Website enthält keine Formulare, keine Logins und keine Tracking-/Analyse-Skripte.
+- Die Website enthält keine Formulare, keine Logins und keine Tracking-/Analyse-Skripte.
 - Die tatsächliche Verarbeitung der Dateien erfolgt in deiner privaten Infrastruktur — prüfe dort die Sicherheitseinstellungen selbstständig.
-
-## Platzhalter
-- `NAME-HIER-EINTRAGEN`
-- `KONTAKT-EMAIL-HIER-EINTRAGEN`
+- Verantwortlicher: Albert Oudehinken
+- Kontakt: oudehinken53@gmail.com
 
 ## Typische DNS-Einträge für eigene Domain
 - Apex-Domain (`example.com`):
