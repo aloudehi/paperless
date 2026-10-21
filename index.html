@@ -1,67 +1,63 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>n8n Google Drive PDF-Import</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
-
-  <header class="site-header" role="banner">
-    <div class="container">
-      <h1 class="site-title">n8n Google Drive PDF-Import</h1>
-      <p class="site-tagline">
-        Private Automatisierung zum Lesen neuer PDF-Dateien aus einem von mir bereitgestellten Google-Drive-Ordner und zum lokalen Import in eine eigene Paperless-ngx-Instanz.
-      </p>
-      <nav class="site-nav" role="navigation" aria-label="Hauptnavigation">
-        <ul>
-          <li><a href="index.html" aria-current="page">Startseite</a></li>
-          <li><a href="privacy.html">Datenschutzerklärung</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header class="container">
+    <h1>n8n Google Drive PDF-Import</h1>
+    <p>Private Automatisierung für das Dokumentenarchiv des Betreibers.</p>
+    <nav aria-label="Hauptnavigation">
+      <a href="index.html" aria-current="page">Startseite</a>
+      <a href="privacy.html">Datenschutzhinweise</a>
+    </nav>
   </header>
-
-  <main id="main" class="container" role="main">
-    <section aria-labelledby="how-it-works">
-      <h2 id="how-it-works">Wie funktioniert es?</h2>
-      <p>
-        Die Automatisierung verwendet n8n und Google OAuth2: Der Betreiber erteilt einmalig Zugriff auf einen ausgewählten Google-Drive-Ordner. n8n überprüft regelmäßig neue Dateien in diesem Ordner, filtert PDF-Dateien heraus und überträgt sie lokal in die eigene Paperless-ngx-Instanz zur Archivierung und Weiterverarbeitung.
-      </p>
-      <ul>
-        <li>Einmalige Autorisierung: Google OAuth2 für den freigegebenen Ordner.</li>
-        <li>Automatischer Abruf: Nur neu hinzugefügte PDF-Dateien werden verarbeitet.</li>
-        <li>Lokale Speicherung: Alle Dateien werden in der eigenen Infrastruktur abgelegt.</li>
-      </ul>
+  <main id="main" class="container">
+    <section aria-labelledby="import">
+      <h2 id="import">Was die Anwendung macht</h2>
+      <p>Der Betreiber verbindet sein Google-Konto über OAuth mit seiner selbst
+        gehosteten n8n-Instanz. Die Automatisierung prüft einen festgelegten
+        Google-Drive-Ordner regelmäßig auf neue PDF-Dateien und importiert diese
+        in die eigene Paperless-ngx-Instanz. Bereits beim Einrichten vorhandene
+        Dateien werden nicht automatisch nachträglich importiert.</p>
+      <p>Die Quelldateien bleiben in Google Drive erhalten. Der Importlauf
+        löscht keine Drive-Dateien. Dokumente und zugehörige Metadaten werden
+        im privaten Archiv gespeichert; Importzustände helfen, Wiederholungen
+        zu erkennen.</p>
     </section>
-
-    <section aria-labelledby="data-processing">
-      <h2 id="data-processing">Datenverarbeitung</h2>
-      <p>
-        Zugriff erfolgt ausschließlich auf Inhalte, die der Kontoinhaber für den verwendeten Drive-Ordner freigegeben hat. Die Verarbeitung findet ausschließlich lokal in der selbst gehosteten Infrastruktur des Betreibers statt.
-      </p>
-      <p>
-        Es werden keine Dokumentinhalte, Zugangsdaten, API-Keys oder personenbezogene Daten Dritter gespeichert oder an Dritte weitergegeben. Es erfolgt keine automatisierte Profilbildung und keine Auswertung zu Werbezwecken.
-      </p>
+    <section aria-labelledby="access">
+      <h2 id="access">Zugang und Berechtigungen</h2>
+      <p>Die Anwendung dient dem privaten Gebrauch und bietet keine öffentliche
+        Registrierung an. Diese Website ist nur eine Infoseite und kein Zugang
+        zum Dokumentenarchiv.</p>
+      <p>Die Verarbeitung ist im Importprogramm auf den festgelegten Ordner
+        begrenzt. Das ist keine Zusicherung, dass die von Google erteilten
+        OAuth-Berechtigungen technisch nur diesen Ordner umfassen. Maßgeblich
+        sind die bei Google tatsächlich genehmigten Berechtigungen.</p>
     </section>
-
+    <section aria-labelledby="processing">
+      <h2 id="processing">Speicherung und weitere Verarbeitung</h2>
+      <p>Paperless speichert die importierten Dokumente und verarbeitet sie in
+        der Infrastruktur des Betreibers. Eine getrennte KI-Unterstützung kann
+        ausgelesene Dokumenttexte und zur Aufgabe erforderliche Angaben an die
+        Google Gemini API senden, um Metadaten vorzuschlagen oder zu ergänzen.
+        Diese KI-Verarbeitung ist nicht der Drive-Import selbst.</p>
+      <p>Private Dokumente, OAuth-Tokens und API-Schlüssel werden nicht auf dieser
+        öffentlichen Website bereitgestellt. Weitere Angaben zu Hosting,
+        Datenverarbeitung und Widerruf stehen in den
+        <a href="privacy.html">Datenschutzhinweisen</a>.</p>
+    </section>
     <section aria-labelledby="contact">
       <h2 id="contact">Kontakt</h2>
-      <p>
-        Bei Fragen oder für Rückfragen: <strong>oudehinken53@gmail.com</strong>
-      </p>
+      <p>Albert Oudehinken · <a href="mailto:oudehinken53@gmail.com">oudehinken53@gmail.com</a></p>
     </section>
-
-    <footer class="page-footer" role="contentinfo">
-      <p>
-        <a href="privacy.html">Datenschutzerklärung</a>
-      </p>
-      <p class="small">
-        Hinweis: Diese Seite ist rein informativ und enthält keinen Login, keine Server-URLs oder Portweiterleitungen.
-      </p>
-    </footer>
   </main>
+  <footer class="container">
+    <p>Stand: 21. Oktober 2026 · <a href="privacy.html">Datenschutzhinweise</a></p>
+  </footer>
 </body>
 </html>
